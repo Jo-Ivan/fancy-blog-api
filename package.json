@@ -1,0 +1,20 @@
+{
+  "name": "fancy-blog-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jo-Ivan/fancy-blog-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jo-Ivan/fancy-blog-api/issues"
+  },
+  "homepage": "https://github.com/Jo-Ivan/fancy-blog-api#readme"
+}
