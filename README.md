@@ -1,9 +1,10 @@
 # Fancy Blog Back-end
 
 ## Description
-This app provides the back-end data for our Fancy Blog front-end.
+This app provides the back-end data for our Fancy Blog front-end. <br />
 Link to API: https://fancy-blog-api.herokuapp.com/posts
-- need a screen shot (DELETE ME)
+<img width="600" alt="Screen Shot 2021-09-27 at 1 47 54 PM" src="https://user-images.githubusercontent.com/22283342/134959357-6768799f-dc28-4737-b539-07d0f8c87f0b.png">
+
 
 ## Technologies
 - Javascript
