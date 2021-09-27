@@ -13,7 +13,7 @@ mongoose.connection.once("open", () => {
 });
 
 // Importing schemas
-const Animal = require("./models/Animal");
+const Post = require("./models/Post");
 
 // Middleware
 app.use(express.json());
