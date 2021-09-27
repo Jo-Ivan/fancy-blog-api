@@ -17,25 +17,26 @@ router.get("/", (req, res, next) => {
 });
 
 // Show route
-router.get('/:id', (req, res, next) => {
+router.get("/:id", (req, res, next) => {
   Post.findById(req.params.id)
     .then((job) => res.json(job))
-    .catch(next)
+    .catch(next);
 });
 
 // Update route
-router.put('/:id', (req, res, next) => {
-  Post.findOneAndUpdate({ _id: req.params.id }, req.body, {new: true})
+router.put("/:id", (req, res, next) => {
+  Post.findOneAndUpdate({ _id: req.params.id }, req.body, { new: true })
     .then((job) => res.json(job))
-    .catch(next)
+    .catch(next);
 });
 
 // Delete
-router.delete('/:id', (req, res, next) => {
+router.delete("/:id", (req, res, next) => {
   Post.findOneAndDelete({
-    _id: req.params.id,
-  }).then((job) => res.json(job))
-  .catch(next)
+    _id: req.params.id
+  })
+    .then((job) => res.json(job))
+    .catch(next);
 });
 
 module.exports = router;
