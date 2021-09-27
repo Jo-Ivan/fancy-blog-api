@@ -1,24 +1,28 @@
 const express = require("express");
 const mongoose = require("mongoose");
-
-// Instantiate express application object
 const app = express();
+const PORT = process.env.PORT || 3003;
 
-// Add `express.json` middleware which will
-// parse JSON requests into JS objects before
-// they reach the route files.
+// Mongoose configuration
+mongoose.connection.on("error", (err) => console.log(err.message + " is mongo not running?"));
+mongoose.connection.on("disconnected", () => console.log("Mongoose is disconnected"));
+
+mongoose.connect("mongodb://localhost:27017/fancy-blog", { useNewUrlParser: true });
+mongoose.connection.once("open", () => {
+  console.log("Connected to mongoose!!");
+});
+
+// Importing schemas
+const Animal = require("./models/Animal");
+
+// Middleware
 app.use(express.json());
-
-// The urlencoded middleware parses requests which use
-// a specific content type (such as when using Axios)
 app.use(express.urlencoded({ extended: true }));
 
-// Add controllers
+// Controllers
+const postsController = require("./controllers/posts.js");
+app.use("/posts", postsController);
 
-// Define a port for API to run on, if the environment
-// variable called `PORT` is not found use port 4000
-app.set("port", process.env.PORT || 4000);
-// Run server on designated port
-app.listen(app.get("port"), () => {
-  console.log("listening on port " + app.get("port"));
+app.listen(PORT, () => {
+  console.log(`✅ PORT: ${PORT} 🌟`);
 });
