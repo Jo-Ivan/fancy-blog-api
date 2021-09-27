@@ -24,7 +24,7 @@ db.on("open", () => {});
 const Post = require("./models/Post");
 
 // Importing seeds
-const posts = require("./db/seeds");
+const posts = require("./db/seeds.json");
 
 // Seed data
 app.get("/seed-posts", (req, res, next) => {
