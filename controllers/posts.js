@@ -9,7 +9,7 @@ const Post = require("../models/Post");
 //     .catch(next);
 // });
 
-app.get("/", (req, res) => {
+router.get("/", (req, res) => {
   res.send("Hello World!");
 });
 
