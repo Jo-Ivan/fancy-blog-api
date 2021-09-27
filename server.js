@@ -1,5 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const cors = require("cors");
 const app = express();
 const db = mongoose.connection;
 
@@ -39,6 +40,7 @@ app.get("/seed-posts", (req, res, next) => {
 });
 
 // Middleware
+app.use(cors());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
