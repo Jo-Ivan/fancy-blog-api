@@ -1,4 +1,4 @@
-# Fancy Blog Frontend
+# Fancy Blog Backend
 
 ## Description
 - what the app does and why (DELETE ME)
@@ -9,23 +9,23 @@
 A list of the languages, libraries and frameworks used in your application. (DELETE ME)
 
 ## Installation Instructions
-- ???
+- npm i
 
 ## Problems
 problems (DELETE ME)
 
 ## Things to do:
-- add HTTP response status codes
-- finish routes
-- test routes using postman
-- connect mongoDB atlas to the api
+- [x] connect mongoDB atlas to heroku
+- [ ] finish routes
+- [ ] test routes using postman
+- [ ] add HTTP response status codes
 
-## Members 
+## Members
 
 - Joshua Aguiar [jaaguil2](https://github.com/jaaguil2)
-- Parker Byers  github name: 
-- Geraldo Grell github name: 
-- Jo-Ivan Melgarejo github name: 
+- Parker Byers  [byerspn](https://github.com/byerspn)
+- Geraldo Grell
+- Jo-Ivan Melgarejo [jo-ivan](https://github.com/Jo-Ivan)
 
 ## Contribution Guidlines
 
