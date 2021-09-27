@@ -13,6 +13,7 @@ Link to API: https://fancy-blog-api.herokuapp.com/posts
 - Mongoose
 - ExpressJS
 - Heroku
+- Cors
 ## Installation Instructions
 To install locally:
 ```
