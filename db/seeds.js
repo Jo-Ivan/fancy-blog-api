@@ -1,10 +1,16 @@
-const posts = [
-  {
-    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste quasi error a. Ipsum vero doloribus nesciunt rerum? Esse molestiae ipsam labore repudiandae quisquam accusamus placeat, nemo distinctio illum architecto velit?",
-    likes: 5,
-    dislikes: 2,
-    comments: ["This post sucks.", "Funny story!"]
-  }
-];
+/// Require the post model
+const Post = require('../models/Post');
+// Require the seed data
+const seedData = require('./seeds.json');
 
-module.exports = posts;
+// Delete any existing documents in the posts collection
+Post.deleteMany()
+  // Use insertMany and pass it the seed data
+  .then(() => Post.insertMany(seedData))
+  // Log the successful results
+  .then(console.log)
+  // Log any errors if things didn't work
+  .catch(console.error)
+  // Use finally, so that this code will run whether or not
+  // things worked and close our connection to the database.
+  .finally(process.exit);

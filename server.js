@@ -4,7 +4,7 @@ const app = express();
 const db = mongoose.connection;
 
 // Port
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 // Database
 const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost:27017/" + "fancy-blog";
@@ -23,20 +23,20 @@ db.on("open", () => {});
 // Importing schemas
 const Post = require("./models/Post");
 
-// Importing seeds
-const posts = require("./db/seeds");
+// // Importing seeds
+// const posts = require("./db/seeds");
 
-// Seed data
-app.get("/seed-posts", (req, res, next) => {
-  posts.forEach((post) => {
-    Post.create(post, (err, post) => {
-      if (err) {
-        res.status(400).json({ error: err.message });
-      }
-    });
-  });
-  res.send(posts);
-});
+// // Seed data
+// app.get("/seed-posts", (req, res, next) => {
+//   posts.forEach((post) => {
+//     Post.create(post, (err, post) => {
+//       if (err) {
+//         res.status(400).json({ error: err.message });
+//       }
+//     });
+//   });
+//   res.send(posts);
+// });
 
 // Middleware
 app.use(express.urlencoded({ extended: false }));
@@ -47,5 +47,5 @@ const postsController = require("./controllers/posts.js");
 app.use("/posts", postsController);
 
 app.listen(PORT, () => {
-  console.log(`✅ PORT: ${PORT} 🌟`);
+  console.log(`✅ LISTENING ON PORT: ${PORT} 🌟`);
 });
