@@ -3,7 +3,7 @@
 ## Description
 This app provides the back-end data for our Fancy Blog front-end. <br />
 Link to API: https://fancy-blog-api.herokuapp.com/posts
-<img width="600" alt="Screen Shot 2021-09-27 at 1 47 54 PM" src="https://user-images.githubusercontent.com/22283342/134959357-6768799f-dc28-4737-b539-07d0f8c87f0b.png">
+<img width="1000" alt="Screen Shot 2021-09-27 at 1 47 54 PM" src="https://user-images.githubusercontent.com/22283342/134959357-6768799f-dc28-4737-b539-07d0f8c87f0b.png">
 
 
 ## Technologies
@@ -24,9 +24,9 @@ problems (DELETE ME)
 
 ## Things to do:
 - [x] connect mongoDB atlas to heroku and deploy it
-- [ ] finish routes
-- [ ] test routes using postman
-- [ ] add HTTP response status codes
+- [x] finish routes
+- [x] test routes using postman
+- [ ] add HTTP response status codes and error-handling
 
 ## Members
 
