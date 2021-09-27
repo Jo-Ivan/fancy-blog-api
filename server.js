@@ -1,10 +1,11 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const cors = require("cors");
 const app = express();
 const db = mongoose.connection;
 
 // Port
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3003;
 
 // Database
 const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost:27017/" + "fancy-blog";
@@ -39,6 +40,7 @@ const Post = require("./models/Post");
 // });
 
 // Middleware
+app.use(cors());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 

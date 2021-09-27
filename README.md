@@ -1,31 +1,40 @@
-# Fancy Blog Frontend
+# Fancy Blog Back-end
 
 ## Description
-- what the app does and why (DELETE ME)
-- need a screen shot (DELETE ME)
+This app provides the back-end data for our Fancy Blog front-end. <br />
+Link to API: https://fancy-blog-api.herokuapp.com/posts
+<img width="1000" alt="Screen Shot 2021-09-27 at 1 47 54 PM" src="https://user-images.githubusercontent.com/22283342/134959357-6768799f-dc28-4737-b539-07d0f8c87f0b.png">
 
 
 ## Technologies
-A list of the languages, libraries and frameworks used in your application. (DELETE ME)
-
+- Javascript
+- Node.JS
+- MongoDB
+- Mongoose
+- ExpressJS
+- Heroku
+- Cors
 ## Installation Instructions
-- ???
+To install locally:
+```
+npm i
+```
 
 ## Problems
 problems (DELETE ME)
 
 ## Things to do:
-- add HTTP response status codes
-- finish routes
-- test routes using postman
-- connect mongoDB atlas to the api
+- [x] connect mongoDB atlas to heroku and deploy it
+- [x] finish routes
+- [x] test routes using postman
+- [ ] add HTTP response status codes and error-handling
 
-## Members 
+## Members
 
 - Joshua Aguiar [jaaguil2](https://github.com/jaaguil2)
-- Parker Byers  github name: 
-- Geraldo Grell github name: 
-- Jo-Ivan Melgarejo github name: 
+- Parker Byers  [byerspn](https://github.com/byerspn)
+- Geraldo Grell [Jikjii](https://github.com/Jikjii)
+- Jo-Ivan Melgarejo [jo-ivan](https://github.com/Jo-Ivan)
 
 ## Contribution Guidlines
 
