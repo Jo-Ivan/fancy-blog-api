@@ -3,10 +3,14 @@ const router = express.Router();
 const Post = require("../models/Post");
 
 // Index route
-router.get("/", (req, res, next) => {
-  Post.find({})
-    .then((posts) => res.json(posts))
-    .catch(next);
+// router.get("/", (req, res, next) => {
+//   Post.find({})
+//     .then((posts) => res.json(posts))
+//     .catch(next);
+// });
+
+app.get("/", (req, res) => {
+  res.send("Hello World!");
 });
 
 // Post route
