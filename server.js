@@ -23,6 +23,21 @@ db.on("open", () => {});
 // Importing schemas
 const Post = require("./models/Post");
 
+// Importing seeds
+const posts = require("./db/seeds");
+
+// Seed data
+app.get("/seed-posts", (req, res, next) => {
+  posts.forEach((post) => {
+    Post.create(post, (err, post) => {
+      if (err) {
+        res.status(400).json({ error: err.message });
+      }
+    });
+  });
+  res.send(posts);
+});
+
 // Middleware
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
