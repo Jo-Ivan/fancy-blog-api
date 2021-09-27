@@ -1,23 +1,31 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
-const PORT = process.env.PORT || 3003;
+const db = mongoose.connection;
 
-// Mongoose configuration
-mongoose.connection.on("error", (err) => console.log(err.message + " is mongo not running?"));
-mongoose.connection.on("disconnected", () => console.log("Mongoose is disconnected"));
+// Port
+const PORT = process.env.PORT || 3000;
 
-mongoose.connect("mongodb://localhost:27017/fancy-blog", { useNewUrlParser: true });
-mongoose.connection.once("open", () => {
-  console.log("Connected to mongoose!!");
-});
+// Database
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost:27017/" + "fancy-blog";
+
+// Connect to Mongo
+mongoose.connect(MONGODB_URI);
+
+// Error / success
+db.on("error", (err) => console.log(err.message + " is Mongo not running?"));
+db.on("connected", () => console.log("mongo connected: ", MONGODB_URI));
+db.on("disconnected", () => console.log("mongo disconnected"));
+
+// open the connection to mongo
+db.on("open", () => {});
 
 // Importing schemas
 const Post = require("./models/Post");
 
 // Middleware
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
 
 // Controllers
 const postsController = require("./controllers/posts.js");
