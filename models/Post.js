@@ -1,14 +1,16 @@
-const mongoose = require("../db/connection");
+const mongoose = require("mongoose");
 
-const postSchema = new mongoose.Schema({
-  text: {
-    type: String,
-    required: true
+const postSchema = new mongoose.Schema(
+  {
+    text: {
+      type: String,
+      required: true
+    },
+    likes: { type: Number },
+    dislikes: { type: Number },
+    comments: [{ type: String }]
   },
-  likes: { type: Number },
-  dislikes: { type: Number },
-  comments: [{ type: String }],
-  timestamps: { createdAt: "created_at", updatedAt: "updated_at" }
-});
+  { timestamps: true }
+);
 
 module.exports = mongoose.model("Post", postSchema);
