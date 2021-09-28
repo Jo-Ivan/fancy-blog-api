@@ -14,6 +14,7 @@ Link to API: https://fancy-blog-api.herokuapp.com/posts
 - ExpressJS
 - Heroku
 - Cors
+- 
 ## Installation Instructions
 To install locally:
 ```
@@ -36,9 +37,7 @@ problems (DELETE ME)
 - Geraldo Grell [Jikjii](https://github.com/Jikjii)
 - Jo-Ivan Melgarejo [jo-ivan](https://github.com/Jo-Ivan)
 
-## Contribution Guidlines
-
-
+## Contribution Guidelines
 MIT License Copyright (c) 2021
 
 
