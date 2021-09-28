@@ -14,7 +14,6 @@ Link to API: https://fancy-blog-api.herokuapp.com/posts
 - ExpressJS
 - Heroku
 - Cors
-- 
 ## Installation Instructions
 To install locally:
 ```
