@@ -15,7 +15,7 @@ Link to API: https://fancy-blog-api.herokuapp.com/posts
 - Heroku
 - Cors
 ## Installation Instructions
-To install locally and run:
+To locally install and run:
 ```
 npm install
 node server.js
