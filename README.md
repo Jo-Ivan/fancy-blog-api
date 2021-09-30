@@ -15,19 +15,11 @@ Link to API: https://fancy-blog-api.herokuapp.com/posts
 - Heroku
 - Cors
 ## Installation Instructions
-To install locally:
+To install locally and run:
 ```
-npm i
+npm install
+node server.js
 ```
-
-## Problems
-problems (DELETE ME)
-
-## Things to do:
-- [x] connect mongoDB atlas to heroku and deploy it
-- [x] finish routes
-- [x] test routes using postman
-- [ ] add HTTP response status codes and error-handling
 
 ## Members
 
