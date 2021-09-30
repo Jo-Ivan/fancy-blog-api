@@ -29,6 +29,8 @@ node server.js
 - Jo-Ivan Melgarejo [jo-ivan](https://github.com/Jo-Ivan)
 
 ## Contribution Guidelines
+Send any and all inquires to one of the members above.
+
 MIT License Copyright (c) 2021
 
 
