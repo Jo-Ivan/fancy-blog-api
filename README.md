@@ -20,7 +20,7 @@ To locally install and run:
 npm install
 node server.js
 ```
-## Problem
+## Problems
 
 - There is no error handling, could be a future project.
 
